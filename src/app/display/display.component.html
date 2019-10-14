@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<div class="container-fluid">
+  <div class="row ">
+
+    <div class="col-sm">
+
+      <div class=" d-flex flex-wrap">
+
+        <div *ngFor="let product of result1" class="m-4">
+          <div class="card elementsAlignedInThree" >
+            <div class="mt-5 mx-auto">
+
+              <div class="card-body ">
+                <img class="card-img-top mx-4 image pb-3" src="../../assets/Images/{{product.image}}">
+                <div class="prodName">{{product.productName}}</div><br>
+                <div class="prodPrice">{{product.productPrice}}</div><br>
+                <div class="prodPrice"><a routerLink="/product-details">View Details</a></div><br>
+
+                <button type="button" routerLink="/cart" class="btnclass btn-small btn btn-primary">Add to Cart</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+<!--<div class="container-fluid pl-3">
+<div class="row p-2">
+  <div class="col-sm-1"></div>
+<div class="col-sm-2 m-3">
+  <img class="dist" style="height:90%;width:120%;" src="../../assets/Images/tees.jpg">
+</div>
+  <div class="col-sm-2 m-3">
+      <img class="dist" style="height:90%;width:120%;" src="../../assets/Images/denim.jpg" >
+  </div>
+  <div class="col-sm-2 m-3">
+    <a routerLink="/display"><img class=" dist" style="height:90%;width:120%;" src="../../assets/Images/shoes.jpg">
+    </a>
+  </div>
+  <div class="col-sm-2 m-3">
+    <img class="dist" style="height:90%;width:120%;" src="../../assets/Images/bag.jpg">
+
+  </div>
+</div>
+</div>-->
+
+
+
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="product-grid6">
+        <div class="product-image6">
+          <a (click)="filter('Tops')">
+            <img class="pic-1" src="../../assets/Images/topp.jpg">
+          </a>
+        </div>
+        <div class="product-content">
+          <h3 class="title"><a (click)="filter('Tops')">Tops</a></h3>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="product-grid6">
+        <div class="product-image6">
+          <a (click)="filter('Bottoms')">
+            <img class="pic-1" src="../../assets/Images/jeans.jpg">
+          </a>
+        </div>
+        <div class="product-content">
+          <h3 class="title"><a (click)="filter('Bottoms')">Bottoms</a></h3>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="product-grid6">
+        <div class="product-image6">
+          <a (click)="filter('Shoes')" >
+            <img class="pic-1" src="../../assets/Images/sneakers.jpg">
+          </a>
+        </div>
+        <div class="product-content">
+          <h3 class="title"><a (click)="filter('Shoes')">Sneakers</a></h3>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="product-grid6">
+        <div class="product-image6">
+          <a (click)="filter('Accessories')">
+            <img class="pic-1" src="../../assets/Images/access.jpg">
+          </a>
+        </div>
+        <div class="product-content">
+          <h3 class="title"><a (click)="filter('Accessories')">Accessories</a></h3>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<hr>
+
+<div class=" d-flex o">
+  <div class="col-sm-2 p2">
+    <div class="e">
+      <h4 class='p7'><b><i>Price Filters!</i></b></h4> <br><br>
+      <table class="table">
+        <tr>
+          <td>
+            <div class="radio">
+              <label><input type="radio"  name="remember"  class=input (change)="priceFilter($event,1.00,5.00)"><b>$1 - $5</b></label><br>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,5.00,15.00)"><b> $5 - $15</b></label>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,15.00,20.00)"><b> $15 - $20</b></label>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,20.00,50.00)"><b> $20 - $50</b></label>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,50.00,100.00)"><b>Above $50</b></label>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="w-85 m-5 my-2 d-flex flex-wrap z">
+    <div *ngFor="let de of result" class="m-3">
+      <div class="card bor" >
+        <div class="mt-3 mx-auto">
+          <img class="card-img-top image" src="../../assets/Images/{{de.image}}">
+          <div class="card-body">
+            <div class=" prodName">{{de.productName}}</div>
+            <h6 class="lkj prodPrice">$ {{de.prductPrice}}</h6>
+            <div class="prodPrice"><a (click)="viewDetails(de.id)">View Details</a></div>
+            <button type="button" class="btn btn-danger" (click)="addToCart(de.id)">Add to Cart</button><br/>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
