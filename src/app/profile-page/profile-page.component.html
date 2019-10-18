@@ -1,106 +1,82 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Update Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <div class="container">
-  <div class="row">
-    <div class="col-md-3 ">
-      <div class="list-group ">
-        <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action">Track order</a>
-        <a href="#" class="list-group-item list-group-item-action">Previous orders</a>
-        <a href="#" class="list-group-item list-group-item-action">Wishlist</a>
-        <a href="#" class="list-group-item list-group-item-action">Coupons</a>
-        <a href="#" class="list-group-item list-group-item-action">Credits</a>
-        <a href="#" class="list-group-item list-group-item-action">Wallet</a>
-        <a href="#" class="list-group-item list-group-item-action">Edit Profile</a>
-        <a href="#" class="list-group-item list-group-item-action">Address</a>
-        <a href="#" class="list-group-item list-group-item-action">Settings</a>
-
-
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-12">
-              <h4>Your Profile</h4>
-              <hr>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <form>
-                <div class="form-group row">
-                  <label for="username" class="col-4 col-form-label">User Name*</label>
-                  <div class="col-8">
-                    <input value="{{result.username}}" name="username" placeholder="Username" class="form-control here" required="required" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="name" class="col-4 col-form-label">First Name</label>
-                  <div class="col-8">
-                    <input id="name" name="name" placeholder="First Name" class="form-control here" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="lastname" class="col-4 col-form-label">Last Name</label>
-                  <div class="col-8">
-                    <input id="lastname" name="lastname" placeholder="Last Name" class="form-control here" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="text" class="col-4 col-form-label">Nick Name*</label>
-                  <div class="col-8">
-                    <input id="text" name="text" placeholder="Nick Name" class="form-control here" required="required" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="select" class="col-4 col-form-label">Display Name public as</label>
-                  <div class="col-8">
-                    <select id="select" name="select" class="custom-select">
-                      <option value="admin">Admin</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="email" class="col-4 col-form-label">Email*</label>
-                  <div class="col-8">
-                    <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="website" class="col-4 col-form-label">Website</label>
-                  <div class="col-8">
-                    <input id="website" name="website" placeholder="website" class="form-control here" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="publicinfo" class="col-4 col-form-label">Public Info</label>
-                  <div class="col-8">
-                    <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="newpass" class="col-4 col-form-label">New Password</label>
-                  <div class="col-8">
-                    <input id="newpass" name="newpass" placeholder="New Password" class="form-control here" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="offset-4 col-8">
-                    <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
+  <!---heading---->
+  <header class="heading">Update Form</header><hr>
+  <!---Form starting---->
+  <div class="row ">
+    <!--- For Name---->
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-xs-4">
+          <label class="firstname">First Name :</label> </div>
+        <div class="col-xs-8">
+          <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control " [(ngModel)]="result.username">
         </div>
       </div>
     </div>
+
+
+
+    <!-----For username---->
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-xs-4">
+          <label class="mail" >Username :</label></div>
+        <div class="col-xs-8"	>
+          <input type="text" name="username"  id="email"placeholder="Username" class="form-control" [(ngModel)]="result.username">
+        </div>
+      </div>
+    </div>
+    <!-----For Password and confirm password---->
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-xs-4">
+          <label class="pass">New Password :</label></div>
+        <div class="col-xs-8">
+          <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control" [(ngModel)]="result.password">
+        </div>
+      </div>
+    </div>
+
+    <!-----------For Phone number-------->
+    <div class="col-sm-12">
+      <div class ="row">
+        <div class="col-xs-4 ">
+          <label class="gender">Gender:</label>
+        </div>
+
+        <div class="col-xs-4 male">
+          <input type="radio" name="gender" class="gender" value="boy">Male
+        </div>
+
+        <div class="col-xs-4 female">
+          <input type="radio"  name="gender" class="gender" value="girl" >Female
+        </div>
+
+      </div>
+      <div class="col-sm-12">
+        <div class="btn btn-warning" (click)="update()">Update Profile</div>
+      </div>
+    </div>
   </div>
+
+
 </div>
+
+</body>
+</html>
 

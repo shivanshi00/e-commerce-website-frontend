@@ -11,11 +11,12 @@ import { FiltersComponent } from './filters/filters.component';
 import { DisplayComponent } from './display/display.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 const routes: Routes = [
 {
  path: '',
- component: HomePageComponent,
+ component: LoginPageComponent,
 },
   {
     path: 'home',
@@ -52,7 +53,11 @@ component: UserCartComponent,
   {
     path: 'history',
     component:OrderHistoryComponent,
-  }
+  },
+  {
+    path: 'addProduct',
+    component: AddproductComponent,
+  },
 ];
 
 @NgModule({

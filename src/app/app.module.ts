@@ -17,6 +17,7 @@ import {ServicesService} from './services.service';
 import {FormsModule} from "@angular/forms";
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     FiltersComponent,
     DisplayComponent,
     ProfilePageComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,

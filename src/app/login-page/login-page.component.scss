@@ -4,14 +4,14 @@
 max-height:100%;
 max-width:100%;
 }
-html,body{
-background-image: url('../../assets/Images/apparel.jpg');
-height: 100%;
+body{
+  background-image: url('../../assets/Images/apparel.jpg');
+height: 750px;
 font-family: 'Numans', sans-serif;
 background-size: 100%;
 background-repeat: no-repeat;
 padding:95px;
-height: 100%;
+
 }
 
 .container{
@@ -20,7 +20,7 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+height: 250px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -60,6 +60,7 @@ margin-right: 5px;
 }
 
 .login_btn{
+  height: 35px;
 color: black;
 background-color: grey;
 width: 100px;
@@ -70,10 +71,28 @@ color: white;
 background-color: blue;
 }
 
+::-webkit-input-placeholder {
+  color: peachpuff;
+  font-size: 15px;
+}
+
 .links{
 color: white;
 }
 
 .links a{
 margin-left: 4px;
+}
+
+.form-control{
+  height:35px;
+}
+input[type="submit"] {
+  font-size: 15px;
+
+}
+
+.logo{
+  font-family: 'Sofia';font-size: 65px;
+  color: white;
 }

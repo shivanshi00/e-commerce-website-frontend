@@ -21,7 +21,6 @@
 
 
 
-
 <div class="container">
 
   <div class="row">
@@ -89,17 +88,19 @@
 
 <div class=" d-flex o">
   <div class="col-sm-2 p2">
-    <div class="e">
-      <h4 class='p7'><b><i>Price Filters!</i></b></h4> <br><br>
+    <div >
+     <div class="text-center">
+      <h3><b>Price Filters!</b></h3> <br>
+     </div>
       <table class="table">
         <tr>
           <td>
             <div class="radio">
-              <label><input type="radio"  name="remember"  class=input (change)="priceFilter($event,1.00,5.00)"><b>$1 - $5</b></label><br>
-              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,5.00,15.00)"><b> $5 - $15</b></label>
-              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,15.00,20.00)"><b> $15 - $20</b></label>
-              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,20.00,50.00)"><b> $20 - $50</b></label>
-              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,50.00,100.00)"><b>Above $50</b></label>
+              <label><input type="radio"  name="remember"  class=input (change)="priceFilter($event,1.00,5.00)"><b>$1 - $5</b></label><br><br>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,5.00,15.00)"><b> $5 - $15</b></label><br><br>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,15.00,20.00)"><b> $15 - $20</b></label><br><br>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,20.00,50.00)"><b> $20 - $50</b></label><br><br>
+              <label><input type="radio"  name="remember" class=input (change)="priceFilter($event,50.00,100.00)"><b>Above $50</b></label><br><br>
             </div>
           </td>
         </tr>
@@ -116,8 +117,9 @@
             <div class=" prodName">{{de.productName}}</div>
             <h6 class="lkj prodPrice">$ {{de.prductPrice}}</h6>
             <div class="prodPrice"><a (click)="viewDetails(de.id)">View Details</a></div>
+            <div class="text-center">
             <button type="button" class="btn btn-danger" (click)="addToCart(de.id)">Add to Cart</button><br/>
-
+            </div>
 
           </div>
         </div>
@@ -125,3 +127,4 @@
     </div>
   </div>
 </div>
+

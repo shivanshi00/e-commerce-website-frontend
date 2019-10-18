@@ -74,9 +74,7 @@ export class ServicesService {
     return this._http.get("http://localhost:8800/cart/removeproduct/recieve/"+productid, {headers});
   }
 
-  decreaseProduct()
-  {
-  }
+
   getInfo()
   {
     const token=sessionStorage.getItem("token");
@@ -88,5 +86,12 @@ export class ServicesService {
     const token=sessionStorage.getItem("token");
     const headers=new HttpHeaders({Authorization:'Basic '+token});
     return this._http.get("http://localhost:8800/cart/orderhistory/recieve",{headers});
+  }
+
+
+  addProduct(json) {
+    const token=sessionStorage.getItem("token");
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this._http.post("http://localhost:8800/api/create",json,{headers});
   }
 }
