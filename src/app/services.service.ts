@@ -11,24 +11,24 @@ export class ServicesService {
   filterresult:any;
   productdata(id)
   {
-   console.log(id);
-   const token=sessionStorage.getItem('token');
-   const headers=new HttpHeaders({Authorization:'Basic '+token});
-   return this._http.get("http://localhost:8800/api/product/"+id,{headers});
+    console.log(id);
+    const token=sessionStorage.getItem('token');
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this._http.get("http://localhost:8800/api/product/"+id,{headers});
   }
   products()
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-   return this._http.get("http://localhost:8800/api/product", {headers});
+    return this._http.get("http://localhost:8800/api/product", {headers});
   }
 
   filter(category)
   {
-  console.log(category);
+    console.log(category);
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this._http.get("http://localhost:8800/api/product/category/"+category, {headers});
+    return this._http.get("http://localhost:8800/api/product/category/"+category, {headers});
 
   }
 

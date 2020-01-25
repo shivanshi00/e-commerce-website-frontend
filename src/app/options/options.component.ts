@@ -13,7 +13,7 @@ export class OptionsComponent implements OnInit {
   constructor(private abc:ServicesService,private router:Router) {
     this.abc.products().subscribe(res=>{this.result=res;});
   }
-result:any;result1:any;
+  result:any;result1:any;
   ngOnInit() {
   }
   filter(category)
@@ -48,7 +48,7 @@ result:any;result1:any;
   {
     this.abc.addProductToCart(id).subscribe((data)=>{
       this.result1=data;
-    alert("product added");
+      alert("product added");
     });
   }
 

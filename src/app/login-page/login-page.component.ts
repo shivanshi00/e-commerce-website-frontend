@@ -8,7 +8,7 @@ import {AppService} from "../app.service";
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss']
 })
-export class LoginPageComponent implements OnInit {
+export class LoginPageComponent implements OnInit{
   username;
   password;
   constructor(private service:AppService, private router:Router, private authService:AuthenticationService) { }
